@@ -1,0 +1,29 @@
+﻿@using Microsoft.AspNetCore.Builder;
+@using Microsoft.AspNetCore.Localization;
+@using Microsoft.AspNetCore.Http.Features;
+@using Microsoft.AspNetCore.Mvc.Localization;
+@using Microsoft.Extensions.Options;
+
+@inject IViewLocalizer localizer
+@inject IOptions<RequestLocalizationOptions> options
+
+@{
+    //// Select All cultures Languages
+    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+    var cultures = options.Value.SupportedUICultures
+        .Select(c => new SelectListItem { Value = c.Name, Text = c.NativeName })
+        .ToList();
+
+    //// Get User Path ==> علشان اعرف اليوزر واقف فين دلوقت في الابلكيشن بتاعي علشان لما يغير اللغه ارجعه لنفس المكان تاني 
+    var returnUrl = string.IsNullOrEmpty(Context.Request.Path) ? "~/" : $"~{Context.Request.Path.Value}";  
+    /// "~/" ===> User Path in Home Page 
+    /// $"~{Context.Request.Path.Value}" ===> User Url المكان الي كان واقف فيه اليوزر 
+}
+
+<div>
+    <form method="post" asp-controller="Home" asp-action="SetLanguage" asp-route-returnUrl="@returnUrl">
+        <select name="culture" asp-for="@requestCulture.RequestCulture.UICulture.Name" 
+         asp-items="cultures" onchange="this.form.submit();">
+        </select>
+    </form>
+</div>

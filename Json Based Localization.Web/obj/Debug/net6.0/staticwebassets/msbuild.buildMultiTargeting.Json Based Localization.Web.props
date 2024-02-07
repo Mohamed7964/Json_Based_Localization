@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Json Based Localization.Web.props" />
+</Project>

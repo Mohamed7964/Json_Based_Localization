@@ -1,0 +1,36 @@
+C:\Users\Mohamed Elsayed\Desktop\Json Based Localization\Json Based Localization.Web\obj\Debug\net6.0\Json Based Localization.Web.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mohamed Elsayed\Desktop\Json Based Localization\Json Based Localization.Web\obj\Debug\net6.0\Json Based Localization.Web.AssemblyInfoInputs.cache
+C:\Users\Mohamed Elsayed\Desktop\Json Based Localization\Json Based Localization.Web\obj\Debug\net6.0\Json Based Localization.Web.AssemblyInfo.cs
+C:\Users\Mohamed Elsayed\Desktop\Json Based Localization\Json Based Localization.Web\obj\Debug\net6.0\Json Based Localization.Web.csproj.CoreCompileInputs.cache
+C:\Users\Mohamed Elsayed\Desktop\Json Based Localization\Json Based Localization.Web\obj\Debug\net6.0\Json Based Localization.Web.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Mohamed Elsayed\Desktop\Json Based Localization\Json Based Localization.Web\obj\Debug\net6.0\Json Based Localization.Web.RazorAssemblyInfo.cache
+C:\Users\Mohamed Elsayed\Desktop\Json Based Localization\Json Based Localization.Web\obj\Debug\net6.0\Json Based Localization.Web.RazorAssemblyInfo.cs
+C:\Users\Mohamed Elsayed\Desktop\Json Based Localization\Json Based Localization.Web\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\Mohamed Elsayed\Desktop\Json Based Localization\Json Based Localization.Web\bin\Debug\net6.0\appsettings.json
+C:\Users\Mohamed Elsayed\Desktop\Json Based Localization\Json Based Localization.Web\bin\Debug\net6.0\Json Based Localization.Web.staticwebassets.runtime.json
+C:\Users\Mohamed Elsayed\Desktop\Json Based Localization\Json Based Localization.Web\bin\Debug\net6.0\Json Based Localization.Web.exe
+C:\Users\Mohamed Elsayed\Desktop\Json Based Localization\Json Based Localization.Web\bin\Debug\net6.0\Json Based Localization.Web.deps.json
+C:\Users\Mohamed Elsayed\Desktop\Json Based Localization\Json Based Localization.Web\bin\Debug\net6.0\Json Based Localization.Web.runtimeconfig.json
+C:\Users\Mohamed Elsayed\Desktop\Json Based Localization\Json Based Localization.Web\bin\Debug\net6.0\Json Based Localization.Web.dll
+C:\Users\Mohamed Elsayed\Desktop\Json Based Localization\Json Based Localization.Web\bin\Debug\net6.0\Json Based Localization.Web.pdb
+C:\Users\Mohamed Elsayed\Desktop\Json Based Localization\Json Based Localization.Web\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\Mohamed Elsayed\Desktop\Json Based Localization\Json Based Localization.Web\obj\Debug\net6.0\Json Based Localization.Web.csproj.AssemblyReference.cache
+C:\Users\Mohamed Elsayed\Desktop\Json Based Localization\Json Based Localization.Web\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\Mohamed Elsayed\Desktop\Json Based Localization\Json Based Localization.Web\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\Mohamed Elsayed\Desktop\Json Based Localization\Json Based Localization.Web\obj\Debug\net6.0\staticwebassets\msbuild.Json Based Localization.Web.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Mohamed Elsayed\Desktop\Json Based Localization\Json Based Localization.Web\obj\Debug\net6.0\staticwebassets\msbuild.build.Json Based Localization.Web.props
+C:\Users\Mohamed Elsayed\Desktop\Json Based Localization\Json Based Localization.Web\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Json Based Localization.Web.props
+C:\Users\Mohamed Elsayed\Desktop\Json Based Localization\Json Based Localization.Web\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Json Based Localization.Web.props
+C:\Users\Mohamed Elsayed\Desktop\Json Based Localization\Json Based Localization.Web\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\Mohamed Elsayed\Desktop\Json Based Localization\Json Based Localization.Web\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Mohamed Elsayed\Desktop\Json Based Localization\Json Based Localization.Web\obj\Debug\net6.0\scopedcss\bundle\Json Based Localization.Web.styles.css
+C:\Users\Mohamed Elsayed\Desktop\Json Based Localization\Json Based Localization.Web\obj\Debug\net6.0\scopedcss\projectbundle\Json Based Localization.Web.bundle.scp.css
+C:\Users\Mohamed Elsayed\Desktop\Json Based Localization\Json Based Localization.Web\obj\Debug\net6.0\Json Based Localization.Web.csproj.CopyComplete
+C:\Users\Mohamed Elsayed\Desktop\Json Based Localization\Json Based Localization.Web\obj\Debug\net6.0\Json Based Localization.Web.dll
+C:\Users\Mohamed Elsayed\Desktop\Json Based Localization\Json Based Localization.Web\obj\Debug\net6.0\refint\Json Based Localization.Web.dll
+C:\Users\Mohamed Elsayed\Desktop\Json Based Localization\Json Based Localization.Web\obj\Debug\net6.0\Json Based Localization.Web.pdb
+C:\Users\Mohamed Elsayed\Desktop\Json Based Localization\Json Based Localization.Web\obj\Debug\net6.0\Json Based Localization.Web.genruntimeconfig.cache
+C:\Users\Mohamed Elsayed\Desktop\Json Based Localization\Json Based Localization.Web\obj\Debug\net6.0\ref\Json Based Localization.Web.dll
+C:\Users\Mohamed Elsayed\Desktop\Json Based Localization\Json Based Localization.Web\bin\Debug\net6.0\Resources\ar-EG.json
+C:\Users\Mohamed Elsayed\Desktop\Json Based Localization\Json Based Localization.Web\bin\Debug\net6.0\Resources\de-DE.json
+C:\Users\Mohamed Elsayed\Desktop\Json Based Localization\Json Based Localization.Web\bin\Debug\net6.0\Resources\en-US.json

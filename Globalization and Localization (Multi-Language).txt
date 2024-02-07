@@ -1,0 +1,153 @@
+Globalization and Localization (Multi-Language) Steps
+
+Step 1 in programe file :
+
+	1- Add servies in program file  
+		bilder.Services.AddLocalization(o => o.ResourcesPath = : "Resources" );  ==> بعرفه مكان الملف الي فيه المرادفات الي هيستخدمها
+
+		bilder.Services.AddMvc()
+			.AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix); ==> With MVC Only
+			.AddDataAnnotaionsLocalization(); ==> with data annotaions
+
+		في السيرفز دي هعرفه ايه هيه اللوغات الي هيدعمها الابلكيشن 
+		bilder.Services.Configure<RequestLocalizationOptions>(o =>
+		{
+		    var supportedCultures = new[]
+		    {
+			new CultureInfo("en") ==> ("en-US") هنا انا اخترت الانجليزي بشكل عام لو عاوز احدد انجليزي امريكه بس بكتبها بالشكل ده 
+			new CultureInfo("ar") 
+			new CultureInfo("de")
+			new CultureInfo("fr")
+			new CultureInfo("es")
+		    };
+		    
+		    o.DefaultRequestCulture = RequestCulture(culture: "en", uiCulture: "en");
+		    o.SupportedCultures = supportedCultures;
+		    o.SupportedUICultures = supportedCultures;
+ 		}
+		
+	2- under useRouting add
+		var locOption = app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>();
+		app.UseRequestLocalization(locOptions.value);
+
+==================================================================================================
+
+Step 2 	in controler Api :
+
+	1- inject IStringLocalizer in controler
+		private readonly IStringLocalizer<controler name> _localizer
+
+		public controlername(IStringLocalizer<controler name> localizer)
+		{
+			_localizer = localizer
+		}
+
+	2- cerate end point 
+		[HttpGet]
+		public IActionResult Get()
+		{
+			return Ok(_localizer["Welcome".Value])
+		}
+
+	3- create sume folder resources, Controlers, Api ===> with Api
+			      resources, Controlers, View, Shared ===> with Mvc
+	4- create in Api folder Resources File and rename to LanguageController.en ==> Only English ==> علشان اعمل اكتر من لغه بكريت اكتر من ريسورس فاسل 
+	5- In Resources File right name and value 
+	
+============================================In MVC Project======================================================
+
+Step 1 :
+	create empty controler 
+	create index View
+		@using Microsoft.ASpNetCore.Builder
+		@using Microsoft.ASpNetCore.Localization
+		@using Microsoft.Extansions.Options
+
+		@inject IOptions<RequestLocalizationOptions> locOptions
+
+		@{
+			var requestCulture = context.Features.Get<IRequestCultureFeature>();
+		}
+
+		<table>
+			<tr>
+			    <td> Culture </td>
+			    <td> @requestCulture.RequestCulture.Culture.Name </td>
+			</tr>
+			<tr>
+			    <td> UI Culture </td>
+			    <td> @requestCulture.RequestCulture.Culture.Name </td>
+			</tr>
+			<tr>
+			    <td> Date </td>
+			    <td> @DateTime.Now.ToLongDataString </td>
+			</tr>
+			<tr>
+			    <td> Curruncy </td>
+			    <td> @(9985.00.ToString("c")) </td>
+			</tr>
+			<tr>
+			    <td> Number </td>
+			    <td> @(9985.00.ToString("F2")) </td>
+			</tr>
+		</table>
+
+	in layout add new column in navbar
+	create new controler im home controler to create deopdwen list to select language
+
+	in home controler 
+	[HttpPost]
+	public IActionResult SetLanguage(string culture, string returnUrl)
+	{
+		Response.Cookies.Append
+		(
+		  CookieRequestCultureProvider.DefaultCookieNam,
+		  CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
+		  new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
+		);
+		return LocalRedirect(returnUrl);
+	}
+
+Step 2:
+	in shered view add _selectLanguagePartiul
+		@using Microsoft.ASpNetCore.Builder
+		@using Microsoft.ASpNetCore.Localization
+		@using Microsoft.ASpNetCore.Http.Features
+		@using Microsoft.ASpNetCore.Mvc.Localization
+		@using Microsoft.Extansions.Options
+
+		@inject IViewLocalizer localizer
+		@inject IOptions<RequestLocalizationOptions> locOptions
+
+		@{
+			var requestCulture = context.Features.Get<IRequestCultureFeature>();
+			var cultureItems = locOptions.value.SupportedUICultures
+			   .Select(c => new SelectListItem { Value = c.Name, Text = c.DisplayName })
+			   .ToList();
+			var returnUrl = string.IsNullOrEmpty(Context.Request.Path) ? "~/" : $"~{Context.Request.Path.Value}";
+		}
+
+		<div title="@Localizer ["Request Culture Provider :"] @requestCulture?.Provider?.GetType().Name">
+		    <form id = "SelectLanguage" method ="Post" asp-controller ="Home" asp-action ="SetLanguage" asp-route-returnUrl ="@returnUrl">
+			<select name ="culture" onchange ="this.form.submit();" asp-for ="@requestCulture.RequestCulture.UICulture.Name" asp-items ="cultureItems">
+			</select>
+		    </form>
+		</div >
+
+	go to layout view and add partial view
+		
+		<div>
+		     <partial name ="_selectLanguagePartiul"/>
+	
+	go to resources folder and add Controlers, View, Shared	==> Resources File ===> واعمل ملف لكل لغه انا محتجها 	
+	الخطوه الجايه هحتاج ان انا اغير كل الكلمات الي محتاج اني اعدل  عليها واخليها تبص علي ملفات الريسورس 
+	
+	in layout view Add ==>
+
+		@using Microsoft.ASpNetCore.Mvc.Localization
+		@inject IViewLocalizer localizer
+
+		وبعد كده ابدا اغير 
+		Home ==> @Localizer["Home"]
+		Privacy ==> @Localizer["Privacy"]
+		نفس الفكره فكله 

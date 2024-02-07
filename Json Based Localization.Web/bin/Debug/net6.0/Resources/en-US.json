@@ -1,0 +1,15 @@
+{
+  "welcome": "Welcome {0}, How are you?",
+  "home": "Home Page",
+  "privacy": "Privacy",
+  "create": "Create",
+  "culture": "Language",
+  "uiCulture": "UI-Language",
+  "date": "Date & Time",
+  "currency": "Currency",
+  "number": "Number",
+  "test": "Test",
+  "save": "Save",
+  "name": "Name",
+  "required": "Required Field"
+}
